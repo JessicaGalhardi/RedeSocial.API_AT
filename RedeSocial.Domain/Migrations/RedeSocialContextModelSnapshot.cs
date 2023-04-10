@@ -245,7 +245,7 @@ namespace RedeSocial.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("posts");
+                    b.ToTable("posts", (string)null);
                 });
 
             modelBuilder.Entity("RedeSocial.BLL.Models.ProfileUser", b =>
@@ -295,7 +295,7 @@ namespace RedeSocial.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("profileUsers");
+                    b.ToTable("profileUsers", (string)null);
                 });
 
             modelBuilder.Entity("RedeSocial.BLL.Models.Users", b =>
@@ -320,7 +320,7 @@ namespace RedeSocial.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("users");
+                    b.ToTable("users", (string)null);
                 });
 
             modelBuilder.Entity("RedeSocial.BLL.Models.Usuarios", b =>
@@ -345,7 +345,7 @@ namespace RedeSocial.Domain.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("usuarios");
+                    b.ToTable("usuarios", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

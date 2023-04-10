@@ -14,13 +14,13 @@ namespace RedeSocial.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(Usuarios usuarios)
+        public async Task<IActionResult> Register(Users users )
         {
             using (var httpClient = new HttpClient())
             {
-                StringContent content = new StringContent(JsonConvert.SerializeObject(usuarios), Encoding.UTF8, "application/Json");
+                StringContent content = new StringContent(JsonConvert.SerializeObject(users), Encoding.UTF8, "application/Json");
 
-                var response = await httpClient.PostAsync("https://localhost:5001/api/Users/api/Usuarios/Register/", content);
+                var response = await httpClient.PostAsync("https://localhost:5001/api/Users/api/Users/Register/", content);
 
 
             }
@@ -34,13 +34,13 @@ namespace RedeSocial.MVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(Usuarios usuarios)
+        public async Task<IActionResult> Login(Users users )
         {
             using (var httpClient = new HttpClient())
             {
-                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(usuarios), Encoding.UTF8, "application/json");
+                StringContent stringContent = new StringContent(JsonConvert.SerializeObject(users), Encoding.UTF8, "application/json");
 
-                using (var response = await httpClient.PostAsync("https://localhost:5001/api/Users/Login/", stringContent))
+                using (var response = await httpClient.PostAsync("https://localhost:5001/api/Users/api/Users/Login/", stringContent))
                 {
                     string token = await response.Content.ReadAsStringAsync();
 

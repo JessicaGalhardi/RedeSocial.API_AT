@@ -100,7 +100,7 @@ namespace RedeSocial.API.Controllers
 
         // DELETE: api/Posts/5
         [HttpDelete]
-       // [Route("DeletePost/{id}")]
+        [Route("api/Posts/DeletePost/{id}")]
         public async Task<IActionResult> DeletePost(int id)
         {
             if (_context.posts == null)

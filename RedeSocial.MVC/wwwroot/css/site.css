@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 html {
   font-size: 14px;
+   background-image:url(../media/images/bg.png)
 }
 
 @media (min-width: 768px) {
@@ -13,12 +18,18 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    
+}
+
+
+#imgbg {
+  
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 #containerlogin, #containerRegister, #ctDetails, #ctEdt, #ctFeed, #ctPost, #ctProf, #ctCreate, #ctCreatePr, #ctDetailsPr, #ctDetailsPost {
     margin-top: 10%;

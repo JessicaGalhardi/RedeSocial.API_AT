@@ -10,7 +10,8 @@ namespace RedeSocial.MVC.Controllers
 {
     public class ProfileUsersController : Controller
     {
-        
+
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             List<ProfileUser> profilelist = new List<ProfileUser>();

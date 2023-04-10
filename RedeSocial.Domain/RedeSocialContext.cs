@@ -15,7 +15,7 @@ public class RedeSocialContext : IdentityDbContext<IdentityUser>
 {
     public RedeSocialContext(DbContextOptions<RedeSocialContext> options) : base(options) { }
 
-    public DbSet<Usuarios> usuarios { get; set; }
+   
     public DbSet<ProfileUser> profileUsers { get; set; }
 
     public DbSet<Post> posts{ get; set; }

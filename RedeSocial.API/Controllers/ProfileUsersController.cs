@@ -11,6 +11,8 @@ using RedeSocial.DOMAIN;
 
 namespace RedeSocial.API.Controllers
 {
+
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ProfileUsersController : ControllerBase
