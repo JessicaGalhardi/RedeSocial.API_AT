@@ -154,8 +154,7 @@ namespace RedeSocial.MVC.Controllers
 
             }
 
-            return NoContent();
-
+           
         }
         public async Task<IActionResult> Delete(int id)
         {

@@ -11,7 +11,7 @@ using RedeSocial.DOMAIN;
 
 namespace RedeSocial.API.Controllers
 {
-    [Authorize]
+   
     [Route("api/[controller]")]
     [ApiController]
     public class PostsController : ControllerBase
@@ -99,7 +99,8 @@ namespace RedeSocial.API.Controllers
         }
 
         // DELETE: api/Posts/5
-        [HttpDelete("{id}")]
+        [HttpDelete]
+       // [Route("DeletePost/{id}")]
         public async Task<IActionResult> DeletePost(int id)
         {
             if (_context.posts == null)

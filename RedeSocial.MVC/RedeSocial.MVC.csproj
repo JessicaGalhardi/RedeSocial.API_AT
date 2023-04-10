@@ -24,4 +24,8 @@
     <ProjectReference Include="..\RedeSocial.API\RedeSocial.API.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\media\images\" />
+  </ItemGroup>
+
 </Project>

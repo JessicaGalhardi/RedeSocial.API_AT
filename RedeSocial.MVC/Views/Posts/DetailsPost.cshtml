@@ -1,0 +1,72 @@
+﻿@model RedeSocial.BLL.Models.Post
+
+@{
+    ViewData["Title"] = "DetailsPost";
+}
+<div id="ctDetailsPr" class="container ">
+    <div class="container-fluid py-3 align-middle d-flex">
+        <div class="card text-center mx-auto mb-3" style="max-width:1000px; ">
+            <div class="row">
+               
+                    <div class="card-body">
+                        <h5 class="card-title mb-3"> Details events.</h5>
+                        <div class="row">
+                           
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <dl class="row">
+                                            <dt class="col-sm-2">
+                                                @Html.DisplayNameFor(model => model.evento)
+                                            </dt>
+                                            <dd class="col-sm-10">
+                                                @Html.DisplayFor(model => model.evento)
+                                            </dd>
+                                            <dt class="col-sm-2">
+                                                @Html.DisplayNameFor(model => model.DataEvento)
+                                            </dt>
+                                            <dd class="col-sm-10">
+                                                @Html.DisplayFor(model => model.DataEvento)
+                                            </dd>
+                                            <dt class="col-sm-2">
+                                                @Html.DisplayNameFor(model => model.localEvento)
+                                            </dt>
+                                            <dd class="col-sm-10">
+                                                @Html.DisplayFor(model => model.localEvento)
+                                            </dd>
+                                            <dt class="col-sm-2">
+                                                @Html.DisplayNameFor(model => model.descricaoEvento)
+                                            </dt>
+                                            <dd class="col-sm-10">
+                                                @Html.DisplayFor(model => model.descricaoEvento)
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <br />
+                                <div>
+                                    <a asp-action="EditPost" asp-route-id="@Model?.Id" style="background-color:aquamarine">Update Post</a> |
+                                    <a asp-action="DeletePost" asp-route-id="@Model?.Id" style="background-color:red">Delete Post</a>
+                                    <a asp-action="Index" style="background-color:cornflowerblue">Back to List</a>
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+

@@ -4,76 +4,94 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
-    <h4>ProfileUser</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Apelido)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Apelido)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FotoPerfil)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FotoPerfil)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DataNascimento)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DataNascimento)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Genero)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Genero)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Pronome)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Pronome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Bio)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Bio)
-        </dd>
-    </dl>
+
+<div id="ctDetails" class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-12 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: .5rem;">
+                <div class="row g-0">
+                    <div class="col-md-4 gradient-custom text-center text-white"
+                         style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                             alt="Avatar" class="img-fluid my-5" style="width: 80px;" />
+                        <p class="col-sm-12">
+                            @Html.DisplayFor(model => model.Nome)
+                            @Html.DisplayFor(model => model.Sobrenome)
+                        </p>
+                        <i class="far fa-edit mb-5"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body p-4">
+                            <h5 class="text-center">Contact Information</h5>
+                            <br />
+                            <dl class="row">
+
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Email)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Apelido)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Apelido)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.FotoPerfil)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.FotoPerfil)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.DataNascimento)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.DataNascimento)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Genero)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Genero)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Pronome)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Pronome)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Cidade)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Cidade)
+                                </dd>
+                                <dt class="col-sm-6">
+                                    @Html.DisplayNameFor(model => model.Bio)
+                                </dt>
+                                <dd class="col-sm-6">
+                                    @Html.DisplayFor(model => model.Bio)
+                                </dd>
+                            </dl>
+                            <br />
+                            <div>
+                                <a asp-action="Edit" asp-route-id="@Model?.Id" style="background-color:aquamarine">Update Profile</a> |
+                                <a asp-action="Delete" asp-route-id="@Model?.Id" style="background-color:red">Delete Profile</a>
+                                <a asp-action="Index" style="background-color:cornflowerblue">Back to List</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Update Profile</a> |
-    <a asp-action="Delete" asp-route-id="@Model?.Id">Delete Profile</a>
-    <a asp-action="Index">Back to List</a>
-</div>
+       
+
+
+

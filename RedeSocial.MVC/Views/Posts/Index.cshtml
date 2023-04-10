@@ -1,0 +1,61 @@
+﻿@model IEnumerable<RedeSocial.BLL.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="ctPost" class="container-fluid">
+
+    <div class="card mx-auto text-center">
+        <div class="card-body">
+            <div class="row">
+                
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.evento)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.DataEvento)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.localEvento)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.descricaoEvento)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.evento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DataEvento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.localEvento)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.descricaoEvento)
+                                    </td>
+                                    <td >
+
+                                        <a asp-action="DetailsPost" asp-route-id="@item.Id" style="background-color:darkblue">Details</a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

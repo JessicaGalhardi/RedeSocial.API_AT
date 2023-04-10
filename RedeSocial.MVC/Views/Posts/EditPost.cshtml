@@ -1,0 +1,56 @@
+﻿@model RedeSocial.BLL.Models.Post
+
+@{
+    ViewData["Title"] = "EditPost";
+}
+
+i<div id="ctEdt" class="container-fluid d-flex">
+
+    <div class="card mx-auto text-center" style="width: 40rem; ">
+        <div class="card-body">
+            <div class="row">
+                <h4 class="text-center">Update your profile</h4>
+                <div class="col-md-12">
+                    <form asp-action="EditPost">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="evento" class="control-label"></label>
+                            <input asp-for="evento" class="form-control" />
+                            <span asp-validation-for="evento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="DataEvento" class="control-label"></label>
+                            <input asp-for="DataEvento" class="form-control" />
+                            <span asp-validation-for="DataEvento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="localEvento" class="control-label"></label>
+                            <input asp-for="localEvento" class="form-control" />
+                            <span asp-validation-for="localEvento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="descricaoEvento" class="control-label"></label>
+                            <input asp-for="descricaoEvento" class="form-control" />
+                            <span asp-validation-for="descricaoEvento" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                </di>
+
+                <div>
+                    <a asp-action="Index" style="background-color:cornflowerblue">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+                }
