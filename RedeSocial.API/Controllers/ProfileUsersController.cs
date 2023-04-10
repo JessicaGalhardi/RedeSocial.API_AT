@@ -33,7 +33,7 @@ namespace RedeSocial.API.Controllers
             return await _context.profileUsers.ToListAsync();
         }
 
-        [Authorize]
+        
         // GET: api/ProfileUsers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ProfileUser>> GetProfileUser(int id)
@@ -52,7 +52,7 @@ namespace RedeSocial.API.Controllers
             return profileUser;
         }
 
-        [Authorize]
+       
         // PUT: api/ProfileUsers/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -99,7 +99,7 @@ namespace RedeSocial.API.Controllers
             return CreatedAtAction("GetProfileUser", new { id = profileUser.Id }, profileUser);
         }
 
-        [Authorize]
+      
         // DELETE: api/ProfileUsers/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProfileUser(int id)
